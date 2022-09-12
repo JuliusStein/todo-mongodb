@@ -1,3 +1,4 @@
+//The Schema for the standard TodoTask
 const mongoose = require('mongoose');
 
 const todoTaskSchema = new mongoose.Schema({

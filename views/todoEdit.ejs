@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Todo App</title>
+    <!-- Linking to the stylesheet, fonts and fontawesome -->
+    <title>A Simple Todo App</title>
     <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -9,14 +10,19 @@
 </head>
 
 <body>
+    <!-- Wrapper aroung both the new ToDo and the ToDo List -->
     <div class="todo-container">
         <h2>To-Do List</h2>
         <div class="todo">
+            <!-- Form to edit a given ToDo -->
             <form action="" method="POST" class="todo-header">
                 <input type="text" name="content">
                 <button type="submit"><span class="fas fa-plus"></span></button>
             </form>
+            <!-- List of all the ToDos -->
             <ul class="todo-list">
+                <!-- The following code loops through the ToDos in the DB and
+                    if the taskId matches, it updates that entry-->
                 <% todoTasks.forEach(details=> { %>
                     <% if (details._id==idTask) { %>
                         <li class="todo-list-item">

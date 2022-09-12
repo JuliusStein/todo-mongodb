@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Todo App</title>
+        <!-- Linking to the stylesheet, fonts and fontawesome -->
+        <title>A Simple Todo App</title>
         <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
+        <!-- Wrapper aroung both the new ToDo and the ToDo List -->
         <div class="todo-container">
             <h2>To-Do List</h2>
             <div class="todo">
+                <!-- Form to add a new ToDo -->
                 <form action="" method="POST" class="todo-header">
                     <input type="text" name="content">
                     <button type="submit">
@@ -19,6 +22,8 @@
                 </form>
 
                 <ul class="todo-list">
+                    <!-- The following code loops through the ToDos in the DB and
+                        renders each with the corresponding content-->
                     <% todoTasks.forEach(details => { %>
                     <li class="todo-list-item">
                         <div class="todo-list-item-name"><%= details.content %></div>
