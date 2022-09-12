@@ -12,4 +12,4 @@ After having both installed, you will need to add a `.env` file to the root of t
 
 `DB_CONNECT = mongodb+srv://<username>:<password>@<yourDB>.mongodb.net/?retryWrites=true&w=majority`
 
-After this, run `npm start` to start the application. It will be available at `localhost:3000`.
+After this, run `npm start` to start the application. It will be available at `localhost:3030`.
